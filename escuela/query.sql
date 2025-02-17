@@ -1,8 +1,8 @@
-SELECT*FROM alumnos
-SELECT*FROM maestros
-SELECT*FROM cursos
-SELECT*FROM curso_asignacion_maestro
-SELECT*FROM alumnos_inscripcion
+SELECT*FROM alumnos;
+SELECT*FROM maestros;
+SELECT*FROM cursos;
+SELECT*FROM curso_asignacion_maestro;
+SELECT*FROM alumnos_inscripcion;
 
 SELECT  curso_asignacion_maestro.maestro_id, maestros.nombre AS "nombre maestro", alumnos.nombre  
 FROM curso_asignacion_maestro
@@ -16,7 +16,7 @@ SELECT  alumnos.alumno_id, alumnos.nombre, count (alumnos_inscripcion.curso_id) 
 FROM alumnos
 INNER JOIN alumnos_inscripcion
 on alumnos.alumno_id= alumnos_inscripcion.alumno_id
-GROUP by alumnos.nombre
+GROUP by alumnos.nombre;
 
 SELECT curso_asignacion_maestro.curso_id, cursos.nombre_curso, maestros.nombre
 FROM curso_asignacion_maestro
